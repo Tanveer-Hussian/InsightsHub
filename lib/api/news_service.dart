@@ -13,7 +13,7 @@ class NewsService {
     Future<List<dynamic>> getTopHeadlines (String s)async{
       
         final response = await http.get(
-            Uri.parse('https://newsapi.org/v2/top-headlines?sources=${s}&apiKey=e9cddab975374c7298eafd9edd60bb9c')
+            Uri.parse('https://newsapi.org/v2/top-headlines?sources=${s}&apiKey=yourApiKey')
          ).timeout(const Duration(seconds:30));
      
         try{         
@@ -36,7 +36,7 @@ class NewsService {
     Future<List<dynamic>> getGeneralNews()async{
 
         final response = await http.get(
-             Uri.parse('https://newsapi.org/v2/top-headlines?category=general&apiKey=e9cddab975374c7298eafd9edd60bb9c')
+             Uri.parse('https://newsapi.org/v2/top-headlines?category=general&apiKey=yourApiKey')
          ).timeout(const Duration(seconds:30));
        
       try{ 
@@ -60,7 +60,7 @@ class NewsService {
   Future<List<dynamic>> getBusinessNews() async {
     final response = await http
         .get(Uri.parse(
-            'https://newsapi.org/v2/top-headlines?category=business&apiKey=e9cddab975374c7298eafd9edd60bb9c'))
+            'https://newsapi.org/v2/top-headlines?category=business&apiKey=yourApiKey'))
         .timeout(const Duration(seconds: 30));
 
     try {
@@ -91,7 +91,7 @@ class NewsService {
    Future<List<dynamic>> getSportsNews() async {
     final response = await http
         .get(Uri.parse(
-            'https://newsapi.org/v2/top-headlines?category=sports&apiKey=e9cddab975374c7298eafd9edd60bb9c'))
+            'https://newsapi.org/v2/top-headlines?category=sports&apiKey=yourApiKey'))
         .timeout(const Duration(seconds: 30));
 
     try {
@@ -122,7 +122,7 @@ class NewsService {
    Future<List<dynamic>> getTechNews() async {
     final response = await http
         .get(Uri.parse(
-            'https://newsapi.org/v2/top-headlines?category=technology&apiKey=e9cddab975374c7298eafd9edd60bb9c'))
+            'https://newsapi.org/v2/top-headlines?category=technology&apiKey=yourApiKey'))
         .timeout(const Duration(seconds: 30));
 
     try {
